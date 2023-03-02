@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rocketcard</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <span class="title">Compartilhe seu #rocketcard</span>
+
+        <div class="container-box">
+          <div class="content-box">
+            <header class="header">
+              <div class="circle-top">
+                <img src="./assets/logo.svg" alt="" />
+              </div>
+              <h2 class="title-name"></h2>
+            </header>
+
+            <main>
+              <div class="avatar"></div>
+              <div class="card">
+                <ul>
+                  <li>
+                    <img
+                      src="./assets/followers.svg"
+                      alt="Ícone de seguidores"
+                    />
+                    <p class="info"></p>
+                  </li>
+                  <li>
+                    <img src="./assets/following.svg" alt="Ícone de seguindo" />
+                    <p class="info"></p>
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/repository.svg"
+                      alt="Ícone de repositório"
+                    />
+                    <p class="info"></p>
+                  </li>
+                  <li>
+                    <img src="./assets/company.svg" alt="ícone de empresa" />
+                    <p class="info"></p>
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/location.svg"
+                      alt="ícone de localização"
+                    />
+                    <p class="info"></p>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer">
+                <img src="./assets/logo.svg" alt="logo da Rocketcard" />
+                <span class="title">ROCKETCARD</span>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+
+      <div class="aside">
+        <section>
+          <span class="title">Digite seu nome (github)</span>
+          <div class="container-input">
+            <input id="input" type="text" />
+            <button class="btn-name" type="button">Confirmar</button>
+          </div>
+        </section>
+
+        <section>
+          <span class="title">Customizar Rocketcard</span>
+          <button id="btn" type="button">Gerar background</button>
+        </section>
+      </div>
+    </div>   
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="main.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  </body>
+</html>

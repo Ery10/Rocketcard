@@ -1,0 +1,479 @@
+:root {
+  --bg: #000000;
+  --bg-card: #0e1218;
+  --text: #f1f1f1;
+  --img-profile: #8257e5;
+  --buttons: #fff;
+  --border-button: #1a1a1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+ul li p {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text);
+}
+
+ul li img {
+  width: 18px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+
+  font-family: "Prompt", sans-serif;
+  display: flex;
+
+  background: var(--bg-card);
+}
+
+.avatar-circle {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.content {
+  width: 30%;
+  height: 100%;
+
+  margin-top: 60px;
+}
+
+.container-box {
+  width: 100%;
+  height: 90%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 20px;
+
+  background: var(--bg);
+
+  border-radius: 50px;
+}
+
+.content-box {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  border-radius: 50px;
+  background: var(--bg-card);
+
+  overflow: hidden;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+  color: var(--text);
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.header {
+  display: flex;
+  height: 20%;
+  gap: 20px;
+}
+
+.header h2 {
+  display: flex;
+  align-items: center;
+
+  margin-top: 10px;
+  width: 70%;
+
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--text);
+}
+
+.circle-top {
+  width: 12%;
+  height: 42%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #f1f1f1;
+  border-radius: 50%;
+
+  margin: 40px 0 0 40px;
+}
+
+.circle-top img {
+  width: 58%;
+}
+
+.card {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+
+  width: 55%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    #000000 3.65%,
+    rgba(70, 69, 69, 0.72) 53.65%,
+    rgba(62, 56, 56, 0.42) 100%
+  );
+  border-radius: 50px;
+
+  margin: 0 0 80px 20px;
+
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+
+}
+
+.avatar {
+  position: absolute;
+  width: 84%;
+  height: 55%;
+
+  left: 30%; /* centraliza horizontalmente */
+
+  border: 10px solid #8257e5;
+  border-radius: 50%;
+}
+
+.footer {
+  display: flex;
+  gap: 10px;
+
+  margin: 0 20px 20px 0;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+button[type="button"] {
+  height: 60px;
+
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--text);
+  background-color: var(--bg);
+
+  border: 2px solid #1a1a1a;
+}
+
+button[type="button"]:hover {
+  cursor: pointer;
+}
+
+button[type="button"]:active {
+  transform: translateY(2px); /* move o botão 2 pixels para baixo quando clicado */
+}
+
+.aside {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+input {
+  height: 30px;
+  background: #1a1a1a url("./assets/github.svg") no-repeat 5%;
+  color: var(--text);
+  border: none;
+
+  padding-left: 50px;
+}
+
+input:focus {
+  outline: 0;
+  border: 2px solid #8257e5;
+}
+
+input[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.container-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-name[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (width: 1280px) {
+
+  section {
+    gap: 20px;
+  }
+
+  .header h2 {
+    margin-top: 20px;
+  }
+
+  .circle-top {
+    margin: 50px 0 0 40px;
+    width: 14%;
+  }
+
+  .circle-top img {
+    width: 60%;
+  }
+  ul li p {
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .card {
+    margin: 0 0 100px 20px;
+    width: 55%;
+  }
+
+  .footer {
+    margin: 0 20px 20px 0;
+  }
+
+  .avatar {
+    width: 100%;
+    height: 54%;
+
+    left: 22%; /* centraliza horizontalmente */
+  }
+}
+
+@media (width: 1024px) {
+  .circle-top {
+    width: 14%;
+    height: 40%;
+    margin: 30px 0 0 40px;
+  }
+
+  .circle-top img {
+    width: 60%;
+  }
+
+  .header {
+    gap: 12px;
+  }
+
+  .header h2 {
+    font-size: 22px;
+    margin: 0;
+  }
+
+  .card {
+    margin: 0 0 80px 20px;
+    width: 60%;
+  }
+
+  .footer {
+    margin: 0 20px 20px 0;
+  }
+
+  .footer img {
+    width: 14%;
+  }
+
+  .avatar {
+    height: 50%;
+  }
+
+  ul li {
+    gap: 8px;
+  }
+
+  ul li p {
+    font-size: 12px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  input {
+    padding-left: 40px;
+  }
+}
+
+@media (min-width: 754px) and (max-width: 912px) {
+
+  .content {
+    width: 70%;
+  }
+
+  .circle-top {
+    margin: 60px 0 0 40px;
+    width: 14%;
+  }
+
+  .circle-top img {
+    width: 60%;
+  }
+
+
+  .card {
+    margin: 0 0 150px 20px;
+    width: 50%;
+ } 
+
+  .footer {
+    margin: 0 40px 40px 0;
+  }
+
+  .avatar {
+    width: 100%;
+    height: 54%;
+
+    left: 22%; /* centraliza horizontalmente */
+  }
+
+  .header h2 {
+    margin-top: 0;
+    font-size: 28px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  ul {
+    gap: 22px;
+  }
+  
+}
+
+@media (min-width: 375px) and  (max-width: 540px){
+  body {
+    height: 150vh;
+  }
+  .container {
+    flex-direction: column;
+    justify-content: normal;
+  }
+  .content {
+    width: 75%;
+    height: 80%;
+
+    margin-top: 20px;
+  }
+
+  .header {
+    gap: 12px
+  }
+
+  .aside {
+    width: 50%;
+    height: 50%;
+   
+    margin-top: 40px;
+    
+    gap: 20px;
+  }
+
+  section {
+    gap: 12px;
+  }
+
+  .circle-top {
+    margin: 30px 0 0 20px;
+    width: 14%;
+  }
+
+  .circle-top img {
+    width: 60%;
+  }
+
+
+  .card {
+    margin: 0 0 50px 12px;
+    width: 64%;
+ } 
+
+  .footer {
+    margin: 0 12px 12px 0;
+  }
+
+  .avatar {
+    width: 100%;
+    height: 54%;
+
+    left: 22%; /* centraliza horizontalmente */
+  }
+
+  .header h2 {
+    margin-top: 0;
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  ul {
+    gap: 6px;
+  }
+
+  ul li p {
+    font-size: 12px;
+  }
+
+  .footer img {
+    width: 14%;
+  }
+
+  input {
+    padding-left: 30px;
+  }
+}
